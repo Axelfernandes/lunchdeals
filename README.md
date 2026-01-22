@@ -2,7 +2,8 @@
 
 LunchDeals AI is a real-time discovery engine that automatically detects your GPS location to find the best lunch specials and discounts within a 15-mile radius. Built for speed and accuracy, it prioritizes deals expiring today.
 
-![LunchDeals Screenshot](public/vite.svg) *Note: Replace with actual screenshot for your website!*
+Link to live app - (https://lunchdeals.forgify.io/)
+
 
 ## 🚀 Features
 
