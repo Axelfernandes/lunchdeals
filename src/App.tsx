@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { MapPin, Loader2, RefreshCw, LayoutGrid, Map as MapIcon } from 'lucide-react';
+import { MapPin, Loader2, RefreshCw, LayoutGrid, Map as MapIcon, Linkedin, Github } from 'lucide-react';
 import { fetchDeals } from './services/dealsService';
 import type { Deal, Coordinates } from './types/deal';
 import FilterBar from './components/FilterBar';
@@ -332,11 +332,43 @@ function App() {
           <div className="text-2xl font-black tracking-tight mb-4 text-slate-300">
             Lunch<span className="">Deals</span>
           </div>
-          <p className="text-slate-400 text-sm max-w-md mx-auto">
+          <p className="text-slate-400 text-sm max-w-md mx-auto mb-6">
             Find the best lunch specials and discounts near you.
             Scraped in real-time from top deal platforms.
           </p>
-          <div className="mt-8 pt-8 border-t border-slate-50 text-[10px] font-black text-slate-300 uppercase tracking-[0.2em]">
+
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <div className="text-slate-800 font-bold">Made by Axel Joaquim Fernandes</div>
+            <a
+              href="mailto:axe.coleslaw322@passinbox.com"
+              className="text-orange-600 font-medium hover:underline transition-all"
+            >
+              axe.coleslaw322@passinbox.com
+            </a>
+
+            <div className="flex items-center gap-6 mt-2">
+              <a
+                href="https://www.linkedin.com/in/axelfernandes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-blue-600 transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://github.com/Axelfernandes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-slate-900 transition-colors"
+                title="GitHub"
+              >
+                <Github size={24} />
+              </a>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-slate-50 text-[10px] font-black text-slate-300 uppercase tracking-[0.2em]">
             © 2026 LunchDeals LA • Proof of Concept
           </div>
         </div>
