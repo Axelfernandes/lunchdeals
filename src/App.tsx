@@ -50,7 +50,7 @@ function App() {
         (err) => {
           console.error('Geolocation error:', err);
           setError('Location access denied. Using default location.');
-          const defaultCoords: Coordinates = { lat: 34.2838, lng: -118.7006 };
+          const defaultCoords: Coordinates = { lat: 34.0522, lng: -118.2437 }; // Los Angeles City Center
           setUserLocation(defaultCoords);
           fetchDeals(defaultCoords).then(setAllDeals).catch(() => setError('Failed to fetch deals.')).finally(() => setLoading(false));
         },
@@ -144,8 +144,8 @@ function App() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-600">
         <div className="text-center text-white">
           <Loader2 className="w-16 h-16 animate-spin mx-auto mb-4" />
-          <h1 className="text-3xl font-bold mb-2">Finding Lunch Deals...</h1>
-          <p className="text-white/80">Scraping real-time deals near you</p>
+          <h1 className="text-3xl font-bold mb-2">Finding LA Lunch Deals...</h1>
+          <p className="text-white/80">Curating the best specials in Los Angeles</p>
         </div>
       </div>
     );
@@ -169,8 +169,8 @@ function App() {
             <button
               onClick={() => setViewMode('list')}
               className={`p-1.5 rounded-lg transition-all ${viewMode === 'list'
-                  ? 'bg-white text-orange-600 shadow-sm'
-                  : 'text-slate-400 hover:text-slate-600'
+                ? 'bg-white text-orange-600 shadow-sm'
+                : 'text-slate-400 hover:text-slate-600'
                 }`}
               title="List View"
             >
@@ -179,8 +179,8 @@ function App() {
             <button
               onClick={() => setViewMode('map')}
               className={`p-1.5 rounded-lg transition-all ${viewMode === 'map'
-                  ? 'bg-white text-orange-600 shadow-sm'
-                  : 'text-slate-400 hover:text-slate-600'
+                ? 'bg-white text-orange-600 shadow-sm'
+                : 'text-slate-400 hover:text-slate-600'
                 }`}
               title="Map View"
             >
@@ -337,7 +337,7 @@ function App() {
             Scraped in real-time from top deal platforms.
           </p>
           <div className="mt-8 pt-8 border-t border-slate-50 text-[10px] font-black text-slate-300 uppercase tracking-[0.2em]">
-            © 2026 LunchDeals AI • Verified Scraping
+            © 2026 LunchDeals LA • Proof of Concept
           </div>
         </div>
       </footer>
