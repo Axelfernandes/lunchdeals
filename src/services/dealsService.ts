@@ -18,7 +18,7 @@ function deg2rad(deg: number): number {
 }
 
 // Generate high-quality mock deals for Los Angeles (Frontend-only for PoC)
-function generateLAMockDeals(userLocation: Coordinates): Deal[] {
+function generateLAMockDeals(): Deal[] {
     const hotspots = [
         { name: 'Santa Monica', lat: 34.0195, lng: -118.4912 },
         { name: 'DTLA', lat: 34.0407, lng: -118.2468 },
@@ -95,7 +95,7 @@ export async function fetchDeals(userLocation: Coordinates): Promise<Deal[]> {
         // Simulating a slight delay for realism
         await new Promise(resolve => setTimeout(resolve, 800));
 
-        const deals = generateLAMockDeals(userLocation);
+        const deals = generateLAMockDeals();
 
         const dealsWithDistance = deals
             .map(deal => ({
